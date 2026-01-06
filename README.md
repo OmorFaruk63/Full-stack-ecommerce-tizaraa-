@@ -1,6 +1,6 @@
 # 🛍️ MiniShop – Next.js E-commerce Project
 
-A modern mini e-commerce web app built with **Next.js, TypeScript, Tailwind CSS, and Redux Toolkit** — featuring mock APIs, SEO optimization, and realistic performance simulation.
+Next.js E-commerce App – Focused on SSR, CSR, and caching optimization to improve performance, scalability, and page load speed, with minimal emphasis on UI design or backend logic.
 
 ---
 
