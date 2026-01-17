@@ -8,7 +8,8 @@ const OrderSuccessPage: React.FC = () => {
  const cartItems = useAppSelector((state) => state.cart.items);
  const dispatch = useAppDispatch();
  const subtotal = cartItems.reduce(
-  (acc, item) => acc + (item.discount_price ?? item.seeling_price) * item.quantity,
+  (acc, item) =>
+   acc + (item.discount_price ?? item.seeling_price) * item.quantity,
   0
  );
 
@@ -19,8 +20,15 @@ const OrderSuccessPage: React.FC = () => {
  }
 
  // Add an array of payment methods
- const paymentMethods = ["Credit Card", "PayPal", "Bank Transfer", "Apple Pay", "Google Pay"];
- const randomPaymentMethod = paymentMethods[Math.floor(Math.random() * paymentMethods.length)];
+ const paymentMethods = [
+  "Credit Card",
+  "PayPal",
+  "Bank Transfer",
+  "Apple Pay",
+  "Google Pay",
+ ];
+ const randomPaymentMethod =
+  paymentMethods[Math.floor(Math.random() * paymentMethods.length)];
 
  return (
   <div className="max-w-3xl mx-auto px-4 py-16 flex flex-col items-center text-center">
@@ -34,16 +42,14 @@ const OrderSuccessPage: React.FC = () => {
     Order Placed Successfully!
    </h1>
    <p className="text-gray-600 max-w-md mb-8">
-    Thank you for your purchase. Your order has been confirmed and is now
-    being processed. You’ll receive an email confirmation shortly with your
-    order details.
+    Thank you for your purchase. Your order has been confirmed and is now being
+    processed. You’ll receive an email confirmation shortly with your order
+    details.
    </p>
 
    {/* Order Summary Card */}
    <div className="bg-white shadow-md rounded-lg p-6 w-full sm:w-3/4 mb-8 text-left">
-    <h2 className="text-xl font-semibold mb-4 text-gray-800">
-     Order Summary
-    </h2>
+    <h2 className="text-xl font-semibold mb-4 text-gray-800">Order Summary</h2>
     <div className="divide-y divide-gray-200">
      <div className="flex justify-between py-2">
       <span>Order Number</span>
